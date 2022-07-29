@@ -1,0 +1,38 @@
+Q1. You have to create a command which will show you the us time !!
+export TZ=America/Los_Angeles
+
+Q2. Create a folder testing
+>assign the testing folder a group add 2 user naman and aditya
+>we have to make a permission in which only the user that has created the file can delete it ...
+
+2  mkdir testing
+    3  cd testing/
+    4  cd -
+    5  sudo groupadd coc
+    6  sudo useradd naman
+    7  sudo useradd aditya
+    8  cd testing
+    9  ls
+   10  touch hello.txt
+   11  ls -lh
+   12  sudo chgrp coc hello.txt
+   13  ls -lh
+   14  touch d.txt
+   15  ls -lh
+   16  sudo chown naman d.txt 
+   17  ls -lh
+   18  sudo chgrp coc d.txt 
+   19  sudo chown naman hello.txt
+   20  ls -lh
+   21  sudo chown aditya hello.txt
+   22  ls -lh
+   23  sudo chmod 744 d.txt 
+   24  ls -lh
+   25  sudo chmod 744 hello.txt 
+   26  ls -lh
+
+
+Q3. Create a file and make sure everytime you are creating a file you should have a read write execution permission for user ,you should have read write permission for group and read execute for others = 765
+ 
+ Q4.create a 1 gb file in 5 second?? 
+fallocate -l 1G size.txt
