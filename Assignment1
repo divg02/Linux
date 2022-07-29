@@ -1,0 +1,44 @@
+Q1. Try to find out any files and folders having size  less than 20 mb inside the /home directory
+- Only try to find out files (Files only) inside the /home/user directory with created by the user you are currently working = find -size -20M
+- Find out any files updated or created in last 30 min = find -mmin -30
+
+Q2. You need to create a user with the userid as 5000 
+sudo useradd virat
+sudo usermod -u 5000 virat
+OR
+ sudo useradd -u 5000 -g sales -p 123 virat
+- At the same time of creating the user set the password for the user
+sudo passwd virat OR sudo useradd virat -p 123
+                - Also set secondary group of the user as (sales)
+sudo usermod -G sales virat
+
+              -  Also add the comment as in form of date when creating user 
+sudo usermod -c 3rd,july virat
+    
+              - Set the shell of that user to ( sh shell)       {Using a single command}
+sudo usermod -s /bin/sh virat
+
+Q3. Try to add the user into the marketing group  
+ 
+sudo usermod -a -G marketing virat
+             - After that add the user into the sales group
+ 
+sudo usermod -a -G sales virat
+            -  Make sure the user is the part of both group 
+-a = Append generally used to put the user  in both the groups
+
+Q4 .Create any four user ram , shyam ,babu , aman
+               - Set their account to expire in 90 days
+               - Create a group sales & marketing add ram ,shyam to sales 
+     - Add babu ,aman to marketing
+      - Make sure all the four user got the home directory
+     -  give  a comment "Capgemini users" at the time of creating the group
+[ Group should be allocated to all the user at time of creating]
+ groupadd sales
+ groupadd  marketing 
+sudo useradd -c "Capgemini users" -d /home -e 2022-10-03 -g sales ram 
+sudo useradd -c "Capgemini users" -d /home -e 2022-10-03 -g sales shyam
+sudo useradd -c "Capgemini users" -d /home -e 2022-10-03 -g marketing babu 
+sudo useradd -c "Capgemini users" -d /home -e 2022-10-03 -g marketing aman
+sudo chage -l user_name
+cat /etc/passwd 
