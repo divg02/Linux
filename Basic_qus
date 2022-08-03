@@ -1,8 +1,14 @@
-Q1. find out any file whose 3rd character is d ? - ls ??d*
-Q2. Find out those files which has 5 characters and whose 2nd last characters is s? =    ls ???s*
-Q3. find out that file which contains the letters (am) ? =  ls *am*
-Q4.(a) find out those files whose starting character can be a or s?  ls [as]*.py
+Q1. find out any file whose 3rd character is d ?
+- ls ??d*
+Q2. Find out those files which has 5 characters and whose 2nd last characters is s? =    
+ls ???s*
+Q3. find out that file which contains the letters (am) ? = 
+ls *am*
+Q4.(a) find out those files whose starting character can be a or s?  
 (b) and the file should be ended with the extension .py?
-Q5. Fimd out those files which starts from characters from a-k or L-Z or 5-9? ls [a-kL-Z5-9]
-Q6. From the current location go to the documents folder and create 2 folders with the name as leaning and testing  from current folder copy the testing folder into leaning folder??  =mv learning testing
+ls [as]*.py
+Q5. Fimd out those files which starts from characters from a-k or L-Z or 5-9?
+ls [a-kL-Z5-9]
+Q6. From the current location go to the documents folder and create 2 folders with the name as leaning and testing  from current folder copy the testing folder into leaning folder??  =
+mv learning testing
 
